@@ -1,0 +1,17 @@
+name: Periodic Web Request
+
+# Control when the workflow will run using cron syntax
+on:
+  schedule:
+    # Runs the workflow every minute
+    - cron: "*/1 * * * *"
+
+jobs:
+  send_request:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Use curl to send an HTTP request
+      - name: Send HTTP request
+        run: |
+          curl -X GET https://vidora-ect8.onrender.com/api/v1/health-check
