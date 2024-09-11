@@ -4,7 +4,9 @@ name: Periodic Web Request
 on:
   schedule:
     # Runs the workflow every minute
-    - cron: "*/5 * * * *"
+    - cron: "*/10 * * * *"
+  # This will add a "Run workflow" button on the GitHub Actions tab, allowing you to manually run the action and test it without waiting for the cron schedule.
+  workflow_dispatch:
 
 jobs:
   send_request:
