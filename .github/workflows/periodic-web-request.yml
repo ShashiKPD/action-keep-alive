@@ -17,4 +17,4 @@ jobs:
       - name: Send HTTP request
         run: |
           curl -X GET https://vidora-ect8.onrender.com/api/v1/health-check
-          curl -X GET https://job-portal-6owz.onrender.com/api/v1/health-check
+          curl -X GET https://kpd-bot.onrender.com/keep-alive
